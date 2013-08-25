@@ -52,11 +52,11 @@ $(function () {
 
     // Right now you can only add 4 sections, for a total of 5. Change '5' below to the max number of sections you want to allow.
         if (newNum == 5)
-        $('#btnAdd').attr('disabled', true).prop('value', "You've reached the limit");
+        $('#btnAdd').attr('disabled', true).prop('value', "You've reached the limit"); // value here updates the text in the 'add' button when the limit is reached 
     });
 
     $('#btnDel').click(function () {
-    // Confirmation dialog box
+    // Confirmation dialog box. Works on all desktop browsers and iPhone.
         if (confirm("Are you sure you wish to remove this section? This cannot be undone."))
             {
                 var num = $('.clonedInput').length;
@@ -69,11 +69,9 @@ $(function () {
                 $('#btnAdd').attr('disabled', false).prop('value', "add section");});
             }
         return false; // Removes the last section you added
-
-    // Enable the "add" button
-        $('#btnAdd').attr('disabled', false);
     });
-
+    // Enable the "add" button
+    $('#btnAdd').attr('disabled', false);
+    // Disable the "remove" button
     $('#btnDel').attr('disabled', true);
-
 });
