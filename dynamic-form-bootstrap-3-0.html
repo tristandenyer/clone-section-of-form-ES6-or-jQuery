@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamically Duplicating a form, by Tristan Denyer</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    // if Google is down, it looks to local file...
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
+    <script type="text/javascript" src="clone-form-td.js"></script>
+</head>
+
+<body>
+    <div id="O_o"><a href="http://tristandenyer.com/using-jquery-to-duplicate-a-section-of-a-form-maintaining-accessibility/">&laquo; Return to Tristan Denyer's tutorial page 'Duplicating a Form' to download files.</a></div>
+    <div id="wrapper">
+      <form class="form-horizontal">
+        <fieldset>
+
+        <!-- Form Name -->
+        <legend>Demo form using Bootstrap</legend>
+
+        <!-- Select Basic -->
+        <div class="control-group">
+          <label class="control-label" for="title">Title:</label>
+          <div class="controls">
+            <select id="title" name="title" class="input-xlarge">
+              <option>Dr.</option>
+              <option>Mrs.</option>
+              <option>Mr.</option>
+              <option>Ms.</option>
+              <option>Sir</option>
+              <option>Lord</option>
+              <option>Baron</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label" for="first_name">First name:</label>
+          <div class="controls">
+            <input id="first_name" name="first_name" type="text" placeholder="" class="input-xlarge" required="">
+            
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label" for="last_name">Last name:</label>
+          <div class="controls">
+            <input id="last_name" name="last_name" type="text" placeholder="" class="input-xlarge">
+            
+          </div>
+        </div>
+
+        <!-- Prepended text-->
+        <div class="control-group">
+          <label class="control-label" for="twitter_handle">Twitter:</label>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on">@</span>
+              <input id="twitter_handle" name="twitter_handle" class="input-xlarge" placeholder="" type="text">
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label" for="email_address">Email:</label>
+          <div class="controls">
+            <input id="email_address" name="email_address" type="text" placeholder="email@example.com" class="input-xlarge">
+            <p class="help-block">We won't share your email with anyone</p>
+          </div>
+        </div>
+
+        <!-- Multiple Checkboxes (inline) -->
+        <div class="control-group">
+          <label class="control-label" for="checkboxitem">How many pies?</label>
+          <div class="controls">
+            <label class="checkbox inline" for="checkboxitem-0">
+              <input type="checkbox" name="checkboxitem" id="checkboxitem-0" value="1">
+              1
+            </label>
+            <label class="checkbox inline" for="checkboxitem-1">
+              <input type="checkbox" name="checkboxitem" id="checkboxitem-1" value="2">
+              2
+            </label>
+            <label class="checkbox inline" for="checkboxitem-2">
+              <input type="checkbox" name="checkboxitem" id="checkboxitem-2" value="3">
+              3
+            </label>
+            <label class="checkbox inline" for="checkboxitem-3">
+              <input type="checkbox" name="checkboxitem" id="checkboxitem-3" value="4">
+              4
+            </label>
+          </div>
+        </div>
+
+        <!-- Multiple Radios -->
+        <div class="control-group">
+          <label class="control-label" for="radioitem">Do you skate?</label>
+          <div class="controls">
+            <label class="radio" for="radioitem-0">
+              <input type="radio" name="radioitem" id="radioitem-0" value="Yes" checked="checked">
+              Yes
+            </label>
+            <label class="radio" for="radioitem-1">
+              <input type="radio" name="radioitem" id="radioitem-1" value="No">
+              No
+            </label>
+          </div>
+        </div>
+
+        <!-- Button (Double) -->
+        <div class="control-group">
+          <label class="control-label" for="btnAdd"></label>
+          <div class="controls">
+            <button id="btnAdd" name="btnAdd" class="btn btn-info">add section</button>
+            <button id="btnDel" name="btnDel" class="btn btn-danger">remove section above</button>
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="control-group">
+          <label class="control-label" for="notes">Notes:</label>
+          <div class="controls">                     
+            <textarea id="notes" name="notes">Do you want to add a message?</textarea>
+          </div>
+        </div>
+
+        <!-- Multiple Checkboxes (inline) -->
+        <div class="control-group">
+          <label class="control-label" for="check_accept">I accept the terms of service.</label>
+          <div class="controls">
+            <label class="checkbox inline" for="check_accept-0">
+              <input type="checkbox" name="check_accept" id="check_accept-0" value="Yes">
+              Yes
+            </label>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="control-group">
+          <label class="control-label" for="submit_button">Send form</label>
+          <div class="controls">
+            <button id="submit_button" name="submit_button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+
+        </fieldset>
+        </form>
+        <div id="attribution">
+        This plugin uses code and assets from the following sources:
+        <ul>
+            <li>Basic form and CSS (modified) - <a href="http://pea.rs/" target="_blank">pea.rs</a></li>
+            <li>Form reset CSS - <a href="http://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a></li>
+            <li>Original form clone plugin - <a href="http://charlie.griefer.com/blog/2009/09/17/jquery-dynamically-adding-form-elements/" target="_blank">Charlie Griefer</a></li>
+            <li>Background image "Low Contrast Linen" by Jordan Pittman. Find more at <a href="http://subtlepatterns.com/" target="_blank">Subtle Patterns</a></li>
+        </ul>
+      </div> <!-- end attribution -->
+    </div> <!-- end wrapper -->
+    <div id="O_o">
+      <a href="http://tristandenyer.com/using-jquery-to-duplicate-a-section-of-a-form-maintaining-accessibility/">&laquo; Return to Tristan Denyer's tutorial page 'Duplicating a Form' to download files.</a>
+    </div>
+</body>
+</html>
