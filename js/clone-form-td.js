@@ -43,6 +43,10 @@ $(function () {
         newElem.find('.label_email').attr('for', 'ID' + newNum + '_email_address');
         newElem.find('.input_email').attr('id', 'ID' + newNum + '_email_address').attr('name', 'ID' + newNum + '_email_address').val('');
 
+        // Twitter handle (for Bootstrap demo) - append and text
+        newElem.find('.label_twt').attr('for', 'ID' + newNum + '_twitter_handle');
+        newElem.find('.input_twt').attr('id', 'ID' + newNum + '_twitter_handle').attr('name', 'ID' + newNum + '_twitter_handle').val('');
+
     // Insert the new element after the last "duplicatable" input field
         $('#entry' + num).after(newElem);
         $('#ID' + newNum + '_title').focus();
