@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dynamically Duplicating a form, by Tristan Denyer</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-</script>
+
     <script type="text/javascript">
     // if Google is down, it looks to local file...
-if (typeof jQuery == 'undefined') {
-    document.write(unescape("%3Cscript src='jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
     }
     </script>
-    <script type="text/javascript" src="clone-form-td.js"></script>
+    <script type="text/javascript" src="js/clone-form-td.js"></script>
 </head>
 
 <body>
