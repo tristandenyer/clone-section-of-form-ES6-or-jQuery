@@ -9,9 +9,9 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
       /* ==========================================================================
-          Demo using Bootstrap 3.0
-          You don't need any of these styles for the form to work properly. This is 
-          just to create the demo/test page.
+          Demo using Bootstrap 3.0.0
+          You don't need any of the following styles for the form to work properly, 
+          these are just helpers for the demo/test page.
         ========================================================================== */
 
       #wrapper { 
@@ -39,14 +39,20 @@
         border-bottom: #b4c9dd;
         display: block;
         padding: 8px;
+        text-decoration: none;
       }
       #O_o a:hover, #O_o a:active {
         color: #fff;
         border-bottom: #fff;
+        text-decoration: none;
       }
       @media only screen and (max-width: 620px), only screen and (max-device-width: 620px) {
         #wrapper {
           width: 90%;
+        }
+        legend {
+          font-size: 24px;
+          font-weight: 500;
         }
       }
       </style>
@@ -169,8 +175,9 @@
         <div id="attribution">
         This plugin uses code and assets from the following sources:
         <ul>
-            <li>Basic form and CSS - <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap 3.0</a></li>
-            <li>Original form clone plugin - <a href="http://charlie.griefer.com/blog/2009/09/17/jquery-dynamically-adding-form-elements/" target="_blank">Charlie Griefer</a></li>
+            <li>Basic form and CSS - <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap 3.0.0</a></li>
+            <li>Forked from <a href="http://charlie.griefer.com/blog/2009/09/17/jquery-dynamically-adding-form-elements/" target="_blank">Charlie Griefer's original clone plugin.</a></li>
+            <li>Using <a href="http://jquery.com/" target="_blank">jQuery 1.10.2</a></li>
         </ul>
       </div> <!-- end attribution -->
     </div> <!-- end wrapper -->
