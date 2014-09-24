@@ -12,3 +12,7 @@ The new Bootstrap 3.0 demo for this plugin can be found here: <a href="http://tr
 <h2>Questions/support</h2>
 You can best reach me by using my contact page: <a href="http://tristandenyer.com/contact/" title="Contact Tristan Denyer" target="_blank">http://tristandenyer.com/contact/</a><br/>
 Or on Twitter: <a href="https://twitter.com/tristandenyer" target="_blank">@tristandenyer</a>
+<h2>License</h2>
+The MIT License (MIT)<br/><br/>
+Copyright &copy; 2011 Tristan Denyer<br/><br/>
+<a href="http://opensource.org/licenses/MIT" target="_blank">More info on the license.</a>
