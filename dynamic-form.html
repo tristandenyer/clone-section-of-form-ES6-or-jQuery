@@ -7,12 +7,12 @@
 
     <title>Dynamically Duplicating a form, by Tristan Denyer</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <script type="text/javascript">
     // if Google is down, it looks to local file...
     if (typeof jQuery == 'undefined') {
-        document.write(unescape("%3Cscript src='js/jquery-1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+      document.write(unescape("%3Cscript src='js/jquery-1.11.2.min.js' type='text/javascript'%3E%3C/script%3E"));
     }
     </script>
     <script type="text/javascript" src="js/clone-form-td.js"></script>
@@ -106,11 +106,16 @@
         </form>
     </div><!-- end sign-up_box -->
 
-    <p>Latest release is ver 0.9.4.1, last updated Sep, 24 2014.</p>
+    <p>Latest release is ver 0.9.4.3, last updated Mar 22, 2015.</p>
 
     <p>Changelog:</p>
 
-    <p>0.9.4.1 (current/latest)</p>
+    <p>0.9.4.3 (current/latest)</p>
+    <ul>
+        <li>Library: jQuery 1.11.2</li>
+        <li>Added support for cloning multiple form elements independently. <a href="dynamic-form-bootstrap-3-3-4-multiple.html">See demo.</a></li>
+    </ul>
+    <p>0.9.4.1</p>
     <ul>
         <li>added MIT License</li>
         <li>Ran QUnit, all tests passed</li>
