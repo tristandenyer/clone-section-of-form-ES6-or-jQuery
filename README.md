@@ -11,7 +11,7 @@ The old demo for this plugin can be found here: <a href="http://tristandenyer.co
 <h4>Duplicate a whole section of a form</h4>
 The new Bootstrap 3.4 demo for duplicating a whole section of a form can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html" title="Demo: Dynamically duplicating a form" target="_blank">http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html</a>
 <h4>Duplicate multiple elements independently - NEW!</h4>
-The new Bootstrap 3.4 demo supporting duplicating multiple elements independently can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-3-4-multiple.html" title="Demo: Dynamically duplicating multiple elements of a form" target="_blank">http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html</a>
+The new Bootstrap 3.4 demo supporting duplicating multiple elements independently can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-3-4-multiple.html" title="Demo: Dynamically duplicating multiple elements of a form" target="_blank">http://tristandenyer.com/demos/dynamic-form-bootstrap-3-3-4-multiple.html</a>
 <h2>Questions/support</h2>
 You can best reach me by using my contact page: <a href="http://tristandenyer.com/contact/" title="Contact Tristan Denyer" target="_blank">http://tristandenyer.com/contact/</a><br/>
 Or on Twitter: <a href="https://twitter.com/tristandenyer" target="_blank">@tristandenyer</a>
