@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dynamically Duplicating a form, by Tristan Denyer</title>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <style>
       /* ==========================================================================
-          Demo using Bootstrap 3.0.0
+          Demo using Bootstrap 3.3.4 and jQuery 1.11.2
           You don't need any of the following styles for the form to work properly, 
           these are just helpers for the demo/test page.
         ========================================================================== */
@@ -56,21 +56,25 @@
         }
       }
       </style>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <script type="text/javascript">
     // if Google is down, it looks to local file...
     if (typeof jQuery == 'undefined') {
-      document.write(unescape("%3Cscript src='js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+      document.write(unescape("%3Cscript src='js/jquery-1.11.2.min.js' type='text/javascript'%3E%3C/script%3E"));
     }
     </script>
-    <script type="text/javascript" src="js/clone-form-td.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> <!-- only added as a smoke test for js conflicts -->
+    <script type="text/javascript" src="js/clone-form-td-multiple.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> <!-- only added as a smoke test for js conflicts -->
 </head>
 
 <body>
     <div id="O_o"><a href="https://github.com/tristandenyer/Clone-section-of-form-using-jQuery">&laquo; Return to Tristan Denyer's GitHub page.</a></div>
     <div id="wrapper">
+      <div class="well well-lg">
+        <h2>Single section</h1>
+        <p>This demo shows the ability to clone multiple form elements at the same time (or a section of a form.) For cloning multiple subcomponents of a form independently <a href="dynamic-form-bootstrap-3-3-4-multiple.html">see other demo</a>.</p>
+      </div>
       <form action="#" method="post" id="sign-up_area" role="form">
         <legend>Demo form using Bootstrap 3.0</legend>
         <div id="entry1" class="clonedInput">
@@ -173,7 +177,7 @@
         </fieldset>
         </form>
         <div id="attribution">
-        This plugin uses code and assets from the following sources:
+        This demo and plugin uses code and assets from the following sources:
         <ul>
             <li>Basic form and CSS - <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap 3.0.0</a></li>
             <li>Forked from <a href="http://charlie.griefer.com/blog/2009/09/17/jquery-dynamically-adding-form-elements/" target="_blank">Charlie Griefer's original clone plugin.</a></li>
