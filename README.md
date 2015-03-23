@@ -6,11 +6,11 @@ A more detailed overview can be found here: <a href="http://tristandenyer.com/us
 This plugin has been maintained on my website for over a year. A full version history, as well as an introduction, can be found here: <a href="http://tristandenyer.com/using-jquery-to-duplicate-a-section-of-a-form-maintaining-accessibility/" title="Using jQuery to duplicate a section of a form, maintaining accessibility" target="_blank">http://tristandenyer.com/using-jquery-to-duplicate-a-section-of-a-form-maintaining-accessibility/</a>
 <br />
 All future development will be maintained here, in GitHub.
-<h2>Demo</h2>
+<h2>Demos</h2>
 The old demo for this plugin can be found here: <a href="http://tristandenyer.com/demos/dynamic-form.html" title="Demo: Dynamically duplicating a form" target="_blank">http://tristandenyer.com/demos/dynamic-form.html</a>
-<br />
+<br /><br />
 The new Bootstrap 3.4 demo for duplicating a whole section of a form can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html" title="Demo: Dynamically duplicating a form" target="_blank">http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html</a>
-<br />
+<br /><br />
 The new Bootstrap 3.4 demo supporting duplicating multiple elements independently can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-3-4-multiple.html" title="Demo: Dynamically duplicating multiple elements of a form" target="_blank">http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html</a>
 <h2>Questions/support</h2>
 You can best reach me by using my contact page: <a href="http://tristandenyer.com/contact/" title="Contact Tristan Denyer" target="_blank">http://tristandenyer.com/contact/</a><br/>
