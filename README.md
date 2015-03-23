@@ -7,8 +7,11 @@ This plugin has been maintained on my website for over a year. A full version hi
 <br />
 All future development will be maintained here, in GitHub.
 <h2>Demo</h2>
-The current demo for this plugin can be found here: <a href="http://tristandenyer.com/demos/dynamic-form.html" title="Demo: Dynamically duplicating a form" target="_blank">http://tristandenyer.com/demos/dynamic-form.html</a>
-The new Bootstrap 3.0 demo for this plugin can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html" title="Demo: Dynamically duplicating a form" target="_blank">http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html</a>
+The old demo for this plugin can be found here: <a href="http://tristandenyer.com/demos/dynamic-form.html" title="Demo: Dynamically duplicating a form" target="_blank">http://tristandenyer.com/demos/dynamic-form.html</a>
+<br />
+The new Bootstrap 3.4 demo for duplicating a whole section of a form can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html" title="Demo: Dynamically duplicating a form" target="_blank">http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html</a>
+<br />
+The new Bootstrap 3.4 demo supporting duplicating multiple elements independently can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-3-4-multiple.html" title="Demo: Dynamically duplicating multiple elements of a form" target="_blank">http://tristandenyer.com/demos/dynamic-form-bootstrap-3-0.html</a>
 <h2>Questions/support</h2>
 You can best reach me by using my contact page: <a href="http://tristandenyer.com/contact/" title="Contact Tristan Denyer" target="_blank">http://tristandenyer.com/contact/</a><br/>
 Or on Twitter: <a href="https://twitter.com/tristandenyer" target="_blank">@tristandenyer</a>
