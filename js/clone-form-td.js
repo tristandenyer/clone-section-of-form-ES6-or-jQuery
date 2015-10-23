@@ -2,8 +2,8 @@
 Author: Tristan Denyer (based on Charlie Griefer's original clone code, and some great help from Dan - see his comments in blog post)
 Plugin repo: https://github.com/tristandenyer/Clone-section-of-form-using-jQuery
 Demo at http://tristandenyer.com/using-jquery-to-duplicate-a-section-of-a-form-maintaining-accessibility/
-Ver: 0.9.4.1
-Last updated: Sep 24, 2014
+Ver: 0.9.5.0
+Last updated: Oct 23, 2015
 
 The MIT License (MIT)
 
@@ -54,9 +54,20 @@ $(function () {
         newElem.find('.label_ln').attr('for', 'ID' + newNum + '_last_name');
         newElem.find('.input_ln').attr('id', 'ID' + newNum + '_last_name').attr('name', 'ID' + newNum + '_last_name').val('');
 
-        // Color - checkbox
+        // Flavor - checkbox
+        // Note that each input_checkboxitem has a unique identifier "-0". This helps pair up duplicated checkboxes and labels correctly. A bit verbose, at the moment.
         newElem.find('.label_checkboxitem').attr('for', 'ID' + newNum + '_checkboxitem');
-        newElem.find('.input_checkboxitem').attr('id', 'ID' + newNum + '_checkboxitem').attr('name', 'ID' + newNum + '_checkboxitem').val([]);
+        newElem.find('.input_checkboxitem-0').attr('id', 'ID' + newNum + '_checkboxitem-0').attr('name', 'ID' + newNum + '_checkboxitem').val([]);
+        newElem.find('.input_checkboxitem-1').attr('id', 'ID' + newNum + '_checkboxitem-1').attr('name', 'ID' + newNum + '_checkboxitem').val([]);
+        newElem.find('.input_checkboxitem-2').attr('id', 'ID' + newNum + '_checkboxitem-2').attr('name', 'ID' + newNum + '_checkboxitem').val([]);
+        newElem.find('.input_checkboxitem-3').attr('id', 'ID' + newNum + '_checkboxitem-3').attr('name', 'ID' + newNum + '_checkboxitem').val([]);
+
+        // Flavor - checkbox labels
+        // Note that each checkboxitem has a unique identifier "-0". This helps pair up duplicated checkboxes and labels correctly. A bit verbose, at the moment.
+        newElem.find('.checkboxitem-0').attr('for', 'ID' + newNum + '_checkboxitem-0');
+        newElem.find('.checkboxitem-1').attr('for', 'ID' + newNum + '_checkboxitem-1');
+        newElem.find('.checkboxitem-2').attr('for', 'ID' + newNum + '_checkboxitem-2');
+        newElem.find('.checkboxitem-3').attr('for', 'ID' + newNum + '_checkboxitem-3');
 
         // Skate - radio
         newElem.find('.label_radio').attr('for', 'ID' + newNum + '_radioitem');
