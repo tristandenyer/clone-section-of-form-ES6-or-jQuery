@@ -19,6 +19,9 @@ The Bootstrap 3.4 demo for duplicating a whole section of a form can be found he
 ### Duplicate multiple elements independently
 The Bootstrap 3.4 demo supporting duplicating multiple elements independently can be found here: <a href="http://tristandenyer.com/demos/dynamic-form-bootstrap-3-3-4-multiple.html" title="Demo: Dynamically duplicating multiple elements of a form" target="_blank" rel=”noreferrer noopener”>http://tristandenyer.com/demos/dynamic-form-bootstrap-3-3-4-multiple.html</a>
 
+### Cool Time Budget Calculator on Codepen
+ThisI found a pen that uses version 0.9.4.1 to create a simple form for a calculator. View it here: <a href="https://codepen.io/anon/pen/bdJvgG" title="Time Budget Calculator on Codepen" target="_blank" rel=”noreferrer noopener”>https://codepen.io/anon/pen/bdJvgG"</a>
+
 ## Questions/support
 You can best reach me by using my contact page: <a href="http://tristandenyer.com/contact/" title="Contact Tristan Denyer" target="_blank" rel=”noreferrer noopener”>http://tristandenyer.com/contact/</a><br/>
 Or on Twitter: <a href="https://twitter.com/tristandenyer" target="_blank" rel=”noreferrer noopener”>@tristandenyer</a>
