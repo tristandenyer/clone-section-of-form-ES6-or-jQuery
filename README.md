@@ -1,3 +1,7 @@
+<div style="box-sizing: border-box; color: #004085; background-color: #cce5ff; border-color: #b8daff; position: relative; padding: .75rem 1.25rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: .25rem;" role="alert">
+  Works with Bootstrap 4.0.0-beta.3 and jQuery 3.2.1 (not "slim" version)!
+</div>
+
 # Using jQuery to duplicate a section of a form, maintaining accessibility
 This plugin gives the user ability to clone a section of a form, as well as destroy the last cloned section. This also allows the user to add an empty form section with unique IDs, names, and labels to maintain accessibility (a11y) and work with the database.
 
