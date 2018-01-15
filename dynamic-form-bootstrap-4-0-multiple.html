@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dynamically Duplicating a form, by Tristan Denyer</title>
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <style>
       /* ==========================================================================
@@ -58,11 +57,9 @@
         }
       }
       </style>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <script type="text/javascript" src="js/clone-form-td-multiple.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script> <!-- only added as a smoke test for js conflicts -->
 </head>
 
@@ -119,7 +116,8 @@
             <label class="label_email control-label" for="email_address">Email:</label>
             <input id="email_address" name="email_address" type="text" placeholder="like this: billybob@example.com" class="input_email form-control">
           </div>
-        </div><!-- end #entry1 -->
+        </div><!-- end .clonedInput_1 -->
+
         <!-- Button (Double) -->
         <div class="mb-3 text-right">
           <button type="button" id="btnAdd_1" name="btnAdd" class="btn btn-outline-primary">Add email</button>
@@ -133,12 +131,14 @@
             <label class="label_phone control-label" for="phone_number">Phone:</label>
             <input id="phone_number" name="phone_number" type="tel" class="input_phone form-control" placeholder="Phone number">
           </div>
-        </div><!-- end #entry2 -->
+        </div><!-- end .clonedInput_2 -->
+
         <!-- Button (Double) -->
         <div class="mb-3 text-right">
           <button type="button" id="btnAdd_2" name="btnAdd_2" class="btn btn-outline-primary">Add phone</button>
           <button type="button" id="btnDel_2" name="btnDel_2" class="btn btn-outline-danger">Remove phone</button>
         </div>
+
         <!-- Multiple Checkboxes (inline) -->
         <div class="mb-3">
           <label class="label_checkboxitem control-label" for="checkboxitem">What flavors?</label>
