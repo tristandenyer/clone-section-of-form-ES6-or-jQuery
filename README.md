@@ -1,4 +1,4 @@
-> Works with Bootstrap 4.0.0-beta.3 and jQuery 3.2.1 (not "slim" version)!
+> Tested with Bootstrap 4.0.0-beta.3 and jQuery 3.2.1 (not "slim" version)!
 
 # Using jQuery to duplicate a section of a form, maintaining accessibility
 This plugin gives the user ability to clone a section of a form, as well as destroy the last cloned section. This also allows the user to add an empty form section with unique IDs, names, and labels to maintain accessibility (a11y) and work with the database.
