@@ -30,3 +30,6 @@ Or on Twitter: [@tristandenyer](https://twitter.com/tristandenyer "Tristan Denye
 
 ## License
 The MIT License (MIT)
+
+## Tips and High Fives
+This plugin can be found in hundreds of projects. If you too find it useful, feel free to use GitCash tip bot to let me know.
