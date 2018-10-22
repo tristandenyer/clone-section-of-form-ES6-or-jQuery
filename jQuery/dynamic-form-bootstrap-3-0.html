@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamically Duplicating a form, by Tristan Denyer</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* ==========================================================================
+          Demo using Bootstrap 3.3.4 and jQuery 1.11.2
+          You don't need any of the following styles for the form to work properly, 
+          these are just helpers for the demo/test page.
+        ========================================================================== */
+
+      #wrapper { 
+        width:595px;
+        margin:0 auto;
+      }
+      legend {
+        margin-top: 20px;
+      }
+      #attribution {
+        font-size:12px;
+        color:#999;
+        padding:20px;
+        margin:20px 0;
+        border-top:1px solid #ccc;
+      }
+      #O_o { 
+        text-align: center; 
+        background: #33577b;
+        color: #b4c9dd;
+        border-bottom: 1px solid #294663;
+      }
+      #O_o a:link, #O_o a:visited {
+        color: #b4c9dd;
+        border-bottom: #b4c9dd;
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+      }
+      #O_o a:hover, #O_o a:active {
+        color: #fff;
+        border-bottom: #fff;
+        text-decoration: none;
+      }
+      @media only screen and (max-width: 620px), only screen and (max-device-width: 620px) {
+        #wrapper {
+          width: 90%;
+        }
+        legend {
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+      </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    // if Google is down, it looks to local file...
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='js/jquery-1.11.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
+    <script type="text/javascript" src="js/clone-form-td.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> <!-- only added as a smoke test for js conflicts -->
+</head>
+
+<body>
+    <div id="O_o"><a href="https://github.com/tristandenyer/Clone-section-of-form-using-jQuery">&laquo; Return to Tristan Denyer's GitHub page.</a></div>
+    <div id="wrapper">
+      <div class="well well-lg">
+        <h2>Single section</h1>
+        <p>This demo shows the ability to clone multiple form elements at the same time (or a section of a form.) For cloning multiple subcomponents of a form independently <a href="dynamic-form-bootstrap-3-3-4-multiple.html">see other demo</a>.</p>
+      </div>
+      <form action="#" method="post" id="sign-up_area" role="form">
+        <legend>Demo form using Bootstrap 3.0</legend>
+        <div id="entry1" class="clonedInput">
+          <h2 id="reference" name="reference" class="heading-reference">Entry #1</h2>
+          <fieldset>
+
+        <!-- Select Basic -->
+        <label class="label_ttl control-label" for="title">Title:</label>
+        <div class="form-group">
+            <select class="select_ttl form-control" name="title" id="title">
+              <option value="" selected="selected" disabled="disabled">Select your title</option>
+              <option value="Dr.">Dr.</option>
+              <option value="Mr.">Mr.</option>
+              <option value="Mrs.">Mrs.</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Sir">Sir</option>
+            </select> <!-- end .select_ttl -->
+          </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="label_fn control-label" for="first_name">First name:</label>
+          <input id="first_name" name="first_name" type="text" placeholder="" class="input_fn form-control" required="">
+          <p class="help-block">This field is required.</p>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="label_ln control-label" for="last_name">Last name:</label>
+          <input id="last_name" name="last_name" type="text" placeholder="" class="input_ln form-control">
+        </div>
+
+        <!-- Prepended text-->
+        <label class="label_twt control-label" for="twitter_handle">Twitter:</label>
+        <div class="input-group form-group">
+          <span class="input-group-addon">@</span>
+          <input id="twitter_handle" name="twitter_handle" class="input_twt form-control" placeholder="" type="text">
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="label_email control-label" for="email_address">Email:</label>
+          <input id="email_address" name="email_address" type="text" placeholder="like this: billybob@example.com" class="input_email form-control">
+        </div>
+
+        <!-- Multiple Checkboxes (inline) -->
+        <label class="label_checkboxitem control-label" for="checkboxitem">What flavors?</label>
+        <div class="input-group form-group">
+          <label class="checkbox-inline checkboxitem-0" for="checkboxitem-0">
+            <input class="input_checkboxitem-0" type="checkbox" name="checkboxitem" id="checkboxitem-0" value="Apple">
+            Apple
+          </label>
+          <label class="checkbox-inline checkboxitem-1" for="checkboxitem-1">
+            <input class="input_checkboxitem-1" type="checkbox" name="checkboxitem" id="checkboxitem-1" value="Berry">
+            Berry
+          </label>
+          <label class="checkbox-inline checkboxitem-2" for="checkboxitem-2">
+            <input class="input_checkboxitem-2" type="checkbox" name="checkboxitem" id="checkboxitem-2" value="Peach">
+            Peach
+          </label>
+          <label class="checkbox-inline checkboxitem-3" for="checkboxitem-3">
+            <input class="input_checkboxitem-3" type="checkbox" name="checkboxitem" id="checkboxitem-3" value="Grape">
+            Grape
+          </label>
+        </div>
+
+        <!-- Multiple Radios -->
+        <label class="label_radio control-label" for="radioitem">Do you skate?</label>
+        <div class="input-group form-group">
+          <label class="radio" for="radioitem-0">
+              <input class="input_radio" type="radio" name="radioitem" id="radioitem-0" value="Yes">
+              Yes
+            </label>
+            <label class="radio" for="radioitem-1">
+              <input class="input_radio" type="radio" name="radioitem" id="radioitem-1" value="No">
+              No
+            </label>
+        </div>
+        </div><!-- end #entry1 -->
+        <!-- Button (Double) -->
+        <p>
+        <button type="button" id="btnAdd" name="btnAdd" class="btn btn-info">add section</button>
+          <button type="button" id="btnDel" name="btnDel" class="btn btn-danger">remove section above</button>
+        </p>
+
+        <!-- Textarea -->
+        <label class="control-label" for="notes">Notes:</label>
+        <textarea id="notes" name="notes" class="form-control">Do you want to add a message?</textarea>
+
+        <!-- Multiple Checkboxes (inline) -->
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">Yes, I accept the terms of service.</label>
+        </div>
+
+        <!-- Button -->
+        <p>
+          <button id="submit_button" name="submit_button" class="btn btn-primary">Submit</button>
+        </p>
+
+        </fieldset>
+        </form>
+        <div id="attribution">
+        This demo and plugin uses code and assets from the following sources:
+        <ul>
+            <li>Basic form and CSS - <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap 3.0.0</a></li>
+            <li>Forked from <a href="http://charlie.griefer.com/blog/2009/09/17/jquery-dynamically-adding-form-elements/" target="_blank">Charlie Griefer's original clone plugin.</a></li>
+            <li>Using <a href="http://jquery.com/" target="_blank">jQuery 1.10.2</a></li>
+        </ul>
+      </div> <!-- end attribution -->
+    </div> <!-- end wrapper -->
+    <div id="O_o">
+      <a href="https://github.com/tristandenyer/Clone-section-of-form-using-jQuery">&laquo; Return to Tristan Denyer's GitHub page.</a>
+    </div>
+</body>
+</html>
