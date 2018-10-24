@@ -18,15 +18,31 @@ The jQuery version has been in development since June 2013, and is more stable, 
 
 The ES6 version was a direct port over from the jQuery version. While it works in the same way the jQuery one does, there are some notable todos and refactoring that needs to be done before it can be used in production environments.
 
-## History
+## Capabilities
 
-This plugin was originally maintained on my website. A full version history, as well as an introduction, [can be found here](https://tristandenyer.com/using-jquery-to-duplicate-a-section-of-a-form-maintaining-accessibility/ "can be found here").
+This cloning script is built to:
+- allow a user to duplicate a section (one or more inputs) of a form
+- _not_ duplicate the user’s inputs from the original section, but show a fresh, empty section below the original
+- stop a user from adding new sections at a specified integer (default is 5 total)
+- maintain the accessibility of matching the labels to the input attributes, even after cloning
+- increment the updated `for`, `id` and `name` attributes (ID2_, ID3_, ID4_) so as to be unique pairs
+- be customizable to work with your existing form
 
-All future development will be maintained here, in GitHub.
+This is _not_ a drop-in-and-it-works solution. You can see in the .js files that we depend on querying for classnames to update the `for`, `id` and `name` attributes of inputs, among other things.
+
+## How it works
+
+1. you wrap the section you want to allow to be cloned with a div with a class of `clonedInput`.
+2. on click, we clone that section and all of its children nodes
+3. then we increment a number variable (to keep track of sections; `for`, `id` and `name` attributes; removing sections...)
+4. increment the `for`, `id` and `name` attributes (ID2_, ID3_, ID4_) of inputs
+5. set all input values to null
+6. insert the cloned and updated section after the previous
+7. check if we are at the max allowable sections, and update buttons accordingly
 
 ## Demos
 
-The ES6 demo can be viewed here: https://tristandenyer.github.io/Clone-section-of-form-using-jQuery/ES6-JavaScript/
+The ES6 demo can be viewed here: https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/blob/master/ES6-JavaScript/index.html (download repo and view).
 
 ### Duplicate a whole section of a form
 
