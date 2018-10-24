@@ -43,35 +43,35 @@ btnAdd.addEventListener(
     // The numeric ID of the new input field being added, increasing by 1 each time
     let newNum = num + 1;
     let newElem = document.getElementById("entry" + num);
-    let newElem_prime = newElem.cloneNode(true);
+    let newElemCloned = newElem.cloneNode(true);
     // create the new element via clone(), and manipulate it's ID using newNum value
-    newElem_prime.setAttribute("id", `entry${newNum}`);
+    newElemCloned.setAttribute("id", `entry${newNum}`);
 
     // Header - <H2>
-    let header = newElem_prime.querySelector(".heading-reference");
+    let header = newElemCloned.querySelector(".heading-reference");
     header.setAttribute("id", "ID" + newNum + "_reference");
     header.setAttribute("name", "ID" + newNum + "_reference");
     header.innerHTML = "Entry #" + newNum;
 
     // Title - <select>
-    let title = newElem_prime.querySelector(".label_ttl");
+    let title = newElemCloned.querySelector(".label_ttl");
     title.setAttribute("for", "ID" + newNum + "_title");
-    let titleSelect = newElem_prime.querySelector(".select_ttl");
+    let titleSelect = newElemCloned.querySelector(".select_ttl");
     titleSelect.setAttribute("id", "ID" + newNum + "_title");
     titleSelect.setAttribute("name", "ID" + newNum + "_title");
 
     // First name - <input> text
-    let firstNameLabel = newElem_prime.querySelector(".label_fn");
+    let firstNameLabel = newElemCloned.querySelector(".label_fn");
     firstNameLabel.setAttribute("for", "ID" + newNum + "_first_name");
-    let firstNameInput = newElem_prime.querySelector(".input_fn");
+    let firstNameInput = newElemCloned.querySelector(".input_fn");
     firstNameInput.setAttribute("id", "ID" + newNum + "_first_name");
     firstNameInput.setAttribute("name", "ID" + newNum + "_first_name");
     firstNameInput.value = "";
 
     // Last name - <input> text
-    let lastNameLabel = newElem_prime.querySelector(".label_ln");
+    let lastNameLabel = newElemCloned.querySelector(".label_ln");
     lastNameLabel.setAttribute("for", "ID" + newNum + "_last_name");
-    let lastNameInput = newElem_prime.querySelector(".input_ln");
+    let lastNameInput = newElemCloned.querySelector(".input_ln");
     lastNameInput.setAttribute("id", "ID" + newNum + "_last_name");
     lastNameInput.setAttribute("name", "ID" + newNum + "_last_name");
     lastNameInput.value = "";
@@ -80,22 +80,22 @@ btnAdd.addEventListener(
         Note that each input_checkboxitem has a unique identifier "-0".
         This helps pair up duplicated checkboxes and labels correctly. A bit verbose, at the moment.
     */
-    let colorLabel = newElem_prime.querySelector(".label_checkboxitem");
+    let colorLabel = newElemCloned.querySelector(".label_checkboxitem");
     colorLabel.setAttribute("for", "ID" + newNum + "_checkboxitem");
     // -0
-    let colorInput0 = newElem_prime.querySelector(".input_checkboxitem-0");
+    let colorInput0 = newElemCloned.querySelector(".input_checkboxitem-0");
     colorInput0.setAttribute("id", "ID" + newNum + "_checkboxitem-0");
     colorInput0.setAttribute("name", "ID" + newNum + "_checkboxitem");
     // -1
-    let colorInput1 = newElem_prime.querySelector(".input_checkboxitem-1");
+    let colorInput1 = newElemCloned.querySelector(".input_checkboxitem-1");
     colorInput1.setAttribute("id", "ID" + newNum + "_checkboxitem-1");
     colorInput1.setAttribute("name", "ID" + newNum + "_checkboxitem");
     // -2
-    let colorInput2 = newElem_prime.querySelector(".input_checkboxitem-2");
+    let colorInput2 = newElemCloned.querySelector(".input_checkboxitem-2");
     colorInput2.setAttribute("id", "ID" + newNum + "_checkboxitem-2");
     colorInput2.setAttribute("name", "ID" + newNum + "_checkboxitem");
     // clear the checkboxes for cloned section -------- TODO: improve this (see radios).
-    let inputs = newElem_prime.getElementsByTagName("input");
+    let inputs = newElemCloned.getElementsByTagName("input");
     for (let c = 0; c < inputs.length; c++) {
       if (inputs[c].type.toLowerCase() == "checkbox") {
         inputs[c].checked = false;
@@ -103,9 +103,9 @@ btnAdd.addEventListener(
     }
 
     // Skate - <input> radio
-    let skateLabel = newElem_prime.querySelector(".label_radio");
+    let skateLabel = newElemCloned.querySelector(".label_radio");
     skateLabel.setAttribute("for", "ID" + newNum + "_radioitem");
-    let skateAnswerInput = newElem_prime.getElementsByClassName("input_radio");
+    let skateAnswerInput = newElemCloned.getElementsByClassName("input_radio");
     for (let r = 0; r < skateAnswerInput.length; r++) {
       skateAnswerInput[r].setAttribute("id", "ID" + newNum + "_radioitem");
       skateAnswerInput[r].setAttribute("name", "ID" + newNum + "_radioitem");
@@ -115,15 +115,15 @@ btnAdd.addEventListener(
     }
 
     // Email - <input> text
-    let emailLabel = newElem_prime.querySelector(".label_email");
+    let emailLabel = newElemCloned.querySelector(".label_email");
     emailLabel.setAttribute("for", "ID" + newNum + "_email_address");
-    let emailInput = newElem_prime.querySelector(".input_email");
+    let emailInput = newElemCloned.querySelector(".input_email");
     emailInput.setAttribute("id", "ID" + newNum + "_email_address");
     emailInput.setAttribute("name", "ID" + newNum + "_email_address");
     emailInput.value = "";
 
     // Insert the new element after the last "duplicatable" input field
-    newElem.after(newElem_prime);
+    newElem.after(newElemCloned);
 
     // Enable the "remove" button. This only shows once you have a duplicated section.
     btnDel.disabled = false;
