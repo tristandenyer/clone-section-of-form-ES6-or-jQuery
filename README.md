@@ -12,11 +12,11 @@ A more detailed overview [can be found here](https://tristandenyer.com/using-jqu
 
 ## jQuery version
 
-The jQuery version has been in development since June 2013, and is more stable, at the moment.
+The [jQuery version](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/tree/master/jQuery "jQuery version") has been in development since June 2013, and is more stable, at the moment.
 
 ## ES6 JavaScript version
 
-The ES6 version was a direct port over from the jQuery version. While it works in the same way the jQuery one does, there are some notable todos and refactoring that needs to be done before it can be used in production environments.
+The [ES6 version](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/tree/master/ES6-JavaScript "ES6 version") was a direct port over from the jQuery version. While it works in the same way the jQuery one does, there are some notable todos and refactoring that needs to be done before it can be used in production environments.
 
 ## Capabilities
 
