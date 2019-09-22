@@ -1,6 +1,6 @@
 ![npm](https://img.shields.io/npm/v/@tristandenyer/clone-form)
 
-> Just updated to now include a 'non-jQuery' plain JavaScript (ES6) version!
+> Plain JavaScript version now [available on npm](https://www.npmjs.com/package/@tristandenyer/clone-form)! (Currently in alpha.)
 
 # Duplicate a section of a form, maintaining accessibility (a11y)
 
