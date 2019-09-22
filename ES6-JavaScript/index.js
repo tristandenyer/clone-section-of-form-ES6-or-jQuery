@@ -1,9 +1,8 @@
 /*
 Author: Tristan Denyer
-GitHub repo: https://github.com/tristandenyer/Clone-section-of-form-using-jQuery
+GitHub repo: https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/tree/master/ES6-JavaScript
 Demo: https://tristandenyer.github.io/Clone-section-of-form-using-jQuery/ES6-JavaScript/
 Ver: 0.1.0
-Last updated: Oct 21, 2018
 
 The MIT License (MIT)
 
@@ -37,7 +36,7 @@ btnDel.disabled = true;
 
 btnAdd.addEventListener(
   "click",
-  function() {
+  function () {
     // Checks to see how many duplicated sections we currently have
     let num = document.getElementsByClassName("clonedInput").length;
     // The numeric ID of the new input field being added, increasing by 1 each time
@@ -139,7 +138,7 @@ btnAdd.addEventListener(
 
 btnDel.addEventListener(
   "click",
-  function() {
+  function () {
     // check how many duplicated sections we currently have
     let num = document.getElementsByClassName("clonedInput").length;
 

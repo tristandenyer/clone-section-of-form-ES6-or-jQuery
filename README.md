@@ -1,3 +1,5 @@
+![npm](https://img.shields.io/npm/v/@tristandenyer/clone-form)
+
 > Just updated to now include a 'non-jQuery' plain JavaScript (ES6) version!
 
 # Duplicate a section of a form, maintaining accessibility (a11y)
@@ -21,6 +23,7 @@ The [ES6 version](https://github.com/tristandenyer/clone-section-of-form-ES6-or-
 ## Capabilities
 
 This cloning script is built to:
+
 - allow a user to duplicate a section (one or more inputs) of a form
 - _not_ duplicate the user’s inputs from the original section, but show a fresh, empty section below the original
 - stop a user from adding new sections at a specified integer (default is 5 total)
@@ -42,7 +45,7 @@ This is _not_ a drop-in-and-it-works solution. You can see in the .js files that
 
 ## Demos
 
-The ES6 demo can be viewed here: https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/blob/master/ES6-JavaScript/index.html (download repo and view).
+The ES6 demo can be [viewed here](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/blob/master/ES6-JavaScript/demo.html) (download repo and view).
 
 ### Duplicate a whole section of a form
 

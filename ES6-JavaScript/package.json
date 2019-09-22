@@ -1,0 +1,15 @@
+{
+    "name": "@tristandenyer/clone-form",
+    "version": "0.1.2-alpha",
+    "description": "Duplicate a section of a form (as well as destroy the last cloned section), the whole form, or just one or two inputs.",
+    "license": "MIT",
+    "repository": "tristandenyer/clone-section-of-form-ES6-or-jQuery",
+    "main": "index.js",
+    "keywords": [
+        "clone",
+        "form",
+        "npm",
+        "package",
+        "tristandenyer"
+    ]
+}
