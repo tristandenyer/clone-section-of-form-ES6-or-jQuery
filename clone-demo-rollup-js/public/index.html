@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head lang='en'>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width'>
+	<title>rollup-starter-app</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+	<body>
+		<div class="container">
+			<form action="#" method="post" id="sign-up_area">
+			<legend>Demo form using Rollup.js + Bootstrap 4</legend>
+			<div id="entry1" class="clonedInput">
+				<h2 id="reference" name="reference" class="heading-reference">
+				Entry #1
+				</h2>
+				<fieldset>
+				<label class="label_ttl control-label" htmlFor="title">
+					Title:
+				</label>
+				<div class="form-group">
+					<select
+					class="select_ttl form-control"
+					name="title"
+					id="title"
+					>
+					<option value="" disabled="disabled">
+						Select your title
+					</option>
+					<option value="Dr.">Dr.</option>
+					<option value="Mr.">Mr.</option>
+					<option value="Mrs.">Mrs.</option>
+					<option value="Ms.">Ms.</option>
+					<option value="Sir">Sir</option>
+					</select>
+					<!-- end .select_ttl -->
+				</div>
+	
+				<!-- Text input -->
+				<div class="form-group">
+					<label class="label_fn control-label" htmlFor="first_name">
+					First name:
+					</label>
+					<input
+					id="first_name"
+					name="first_name"
+					type="text"
+					placeholder=""
+					class="input_fn form-control"
+					required=""
+					/>
+					<p class="help-block">This field is required.</p>
+				</div>
+	
+				<!-- Text input -->
+				<div class="form-group">
+					<label class="label_ln control-label" htmlFor="last_name">
+					Last name:
+					</label>
+					<input
+					id="last_name"
+					name="last_name"
+					type="text"
+					placeholder=""
+					class="input_ln form-control"
+					/>
+				</div>
+	
+				<!-- Prepended text -->
+				<label class="label_twt" htmlFor="twitter_handle">
+					Twitter handle:
+				</label>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+					<div class="input-group-text">@</div>
+					</div>
+					<input
+					type="text"
+					class="input_twt form-control"
+					id="twitter_handle"
+					name="twitter_handle"
+					placeholder=""
+					/>
+				</div>
+	
+				<!-- Text input -->
+				<div class="form-group">
+					<label
+					class="label_email control-label"
+					htmlFor="email_address"
+					>
+					Email:
+					</label>
+					<input
+					id="email_address"
+					name="email_address"
+					type="text"
+					placeholder="like this: billybob@example.com"
+					class="input_email form-control"
+					/>
+				</div>
+	
+				<!-- Multiple Checkboxes (inline) -->
+				<div class="mb-3">
+					<label
+					class="label_checkboxitem control-label"
+					htmlFor="checkboxitem"
+					>
+					What flavors?
+					</label>
+					<div class="form-check form-check-inline">
+					<input
+						class="form-check-input input_checkboxitem-0"
+						type="checkbox"
+						id="checkboxitem-0"
+						name="checkboxitem"
+						value="Apple"
+					/>
+					<label
+						class="form-check-label checkboxitem-0"
+						htmlFor="checkboxitem-0"
+					>
+						Apple
+					</label>
+					</div>
+					<div class="form-check form-check-inline">
+					<input
+						class="form-check-input input_checkboxitem-1"
+						type="checkbox"
+						id="checkboxitem-1"
+						name="checkboxitem"
+						value="Berry"
+					/>
+					<label
+						class="form-check-label checkboxitem-1"
+						htmlFor="checkboxitem-1"
+					>
+						Berry
+					</label>
+					</div>
+					<div class="form-check form-check-inline">
+					<input
+						class="form-check-input input_checkboxitem-2"
+						type="checkbox"
+						id="checkboxitem-2"
+						name="checkboxitem"
+						value="Peach"
+					/>
+					<label
+						class="form-check-label checkboxitem-2"
+						htmlFor="checkboxitem-2"
+					>
+						Peach
+					</label>
+					</div>
+				</div>
+	
+				<!-- Multiple Radios -->
+				<div class="mb-3">
+					<label class="control-label" htmlFor="radioitem">
+					Do you skate?
+					</label>
+					<div class="form-check form-check-inline">
+					<input
+						class="form-check-input input_radio"
+						type="radio"
+						name="radioitem"
+						id="radioitem-0"
+						value="Yes"
+					/>
+					<label
+						class="form-check-label label_radio"
+						htmlFor="radioitem-0"
+					>
+						Yes
+					</label>
+					</div>
+					<div class="form-check form-check-inline">
+					<input
+						class="form-check-input input_radio"
+						type="radio"
+						name="radioitem"
+						id="radioitem-1"
+						value="No"
+					/>
+					<label
+						class="form-check-label label_radio"
+						htmlFor="radioitem-1"
+					>
+						No
+					</label>
+					</div>
+				</div>
+				<!-- end #entry1 -->
+				</div>
+				<div>
+	
+				<!-- Button (Double) -->
+				<div class="mb-3 text-right">
+					<button
+					type="button"
+					id="btnAdd"
+					name="btnAdd"
+					class="btn btn-outline-primary"
+					>
+					add section
+					</button>
+					<button
+					type="button"
+					id="btnDel"
+					name="btnDel"
+					class="btn btn-outline-danger"
+					>
+					remove section above
+					</button>
+				</div>
+				<!-- Textarea -->
+				<label class="control-label" htmlFor="notes">
+					Notes:
+				</label>
+				<textarea id="notes" name="notes" class="form-control">
+					Do you want to add a message?
+				</textarea>
+	
+				<!-- Single Checkboxe (inline) -->
+				<div class="form-check form-check-inline mb-3">
+					<input
+					class="form-check-input"
+					type="checkbox"
+					id="inlineCheckbox1"
+					value="option1"
+					/>
+					<label class="form-check-label" htmlFor="inlineCheckbox1">
+					Yes, I accept the terms of service.
+					</label>
+				</div>
+	
+				<!-- Button -->
+				<div class="mb-3">
+					<button
+					id="submit_button"
+					name="submit_button"
+					class="btn btn-primary"
+					>
+					Submit
+					</button>
+				</div>
+				</fieldset>
+			</div>
+			</form>
+		</div>
+		<script src='bundle.js'></script>
+	</body>
+</html>

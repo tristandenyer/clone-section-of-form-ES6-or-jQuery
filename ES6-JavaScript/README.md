@@ -20,7 +20,7 @@ This cloning script is built to:
 - _not_ duplicate the user’s inputs from the original section, but show a fresh, empty section below the original
 - stop a user from adding new sections at a specified integer (default is 5 total)
 - maintain the accessibility of matching the labels to the input attributes, even after cloning
-- increment the updated `for`, `id` and `name` attributes (ID2_, ID3_, ID4_) so as to be unique pairs
+- increment the updated `for`, `id` and `name` attributes (ID2*, ID3*, ID4\_) so as to be unique pairs
 - be customizable to work with your existing form
 
 This is _not_ a drop-in-and-it-works solution. You can see in the index.js file that we depend on querying for classnames to update the `for`, `id` and `name` attributes of inputs, among other things.
@@ -30,14 +30,25 @@ This is _not_ a drop-in-and-it-works solution. You can see in the index.js file 
 1. you wrap the section you want to allow to be cloned with a div with a class of `clonedInput`.
 2. on click, we clone that section and all of its children nodes
 3. then we increment a number variable (to keep track of sections; `for`, `id` and `name` attributes; removing sections...)
-4. increment the `for`, `id` and `name` attributes (ID2_, ID3_, ID4_) of inputs
+4. increment the `for`, `id` and `name` attributes (ID2*, ID3*, ID4\_) of inputs
 5. set all input values to null
 6. insert the cloned and updated section after the previous
 7. check if we are at the max allowable sections, and update buttons accordingly
 
+## Form field support
+
+This is currently supporting the cloning of:
+
+- `<input>` type="text"
+- `<input>` type="checkbox"
+- `<input>` type="radio"
+- `<select>` menu of options
+
 ## Demos
 
-The ES6 demo can be [viewed here](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/blob/master/ES6-JavaScript/demo.html) (download repo and view).
+The public ES6 static site demo can be [viewed here](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/blob/master/ES6-JavaScript/demo.html) (download repo and view).
+
+There is also a demo using the Rollup.js starter app [available in this repo](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/clone-demo-rollup-js) (download repo and run--[see README for details](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/clone-demo-rollup-js/blob/master/README.md)).
 
 ### Cool Time Budget Calculator on Codepen
 
