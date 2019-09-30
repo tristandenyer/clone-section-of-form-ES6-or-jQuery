@@ -2,7 +2,7 @@
 Author: Tristan Denyer
 GitHub repo: https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/tree/master/ES6-JavaScript
 Demo: https://tristandenyer.github.io/Clone-section-of-form-using-jQuery/ES6-JavaScript/
-Ver: 0.1.0
+Ver: 0.1.4-alpha
 
 The MIT License (MIT)
 
