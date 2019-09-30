@@ -48,7 +48,7 @@ This is currently supporting the cloning of:
 
 The public ES6 static site demo can be [viewed here](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/blob/master/ES6-JavaScript/demo.html) (download repo and view).
 
-There is also a demo using the Rollup.js starter app [available in this repo](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/clone-demo-rollup-js) (download repo and run--[see README for details](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/clone-demo-rollup-js/blob/master/README.md)).
+There is also a demo using the Rollup.js starter app [available in this repo](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/tree/master/clone-demo-rollup-js) (download repo and run--[see README for details](https://github.com/tristandenyer/clone-section-of-form-ES6-or-jQuery/blob/master/clone-demo-rollup-js/README.md)).
 
 ### Cool Time Budget Calculator on Codepen
 
